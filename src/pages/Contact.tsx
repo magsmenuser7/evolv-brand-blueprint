@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -6,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Mail, MessageCircle, Phone } from 'lucide-react';
+import { MapPin, Mail, MessageCircle, Phone, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -52,6 +51,35 @@ const Contact = () => {
     });
   };
 
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Hi Evolv Global! I'm interested in discussing my brand's evolution. Can we schedule a consultation?");
+    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://instagram.com/evolvglobal', '_blank');
+  };
+
+  const handleLinkedInClick = () => {
+    window.open('https://linkedin.com/company/evolv-global', '_blank');
+  };
+
+  const handleTwitterClick = () => {
+    window.open('https://twitter.com/evolvglobal', '_blank');
+  };
+
+  const handleCallClick = () => {
+    window.open('tel:+919876543210', '_self');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:connect@evolvglobal.com?subject=Brand Consultation Inquiry', '_self');
+  };
+
+  const handleMapClick = () => {
+    window.open('https://maps.google.com?q=Jubilee+Hills+Hyderabad+India', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -63,9 +91,40 @@ const Contact = () => {
             <h1 className="text-5xl md:text-6xl font-black text-primary leading-tight mb-8">
               Let's Build Your Brand <span className="text-evolv-copper">Ecosystem</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
               Ready to evolve? Let's start with a conversation about your brand's future.
             </p>
+            
+            {/* Social Media Quick Access */}
+            <div className="flex justify-center space-x-6 mb-8">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleWhatsAppClick}
+                className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white"
+              >
+                <MessageCircle className="mr-2" size={20} />
+                WhatsApp
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleInstagramClick}
+                className="border-2 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white"
+              >
+                <Instagram className="mr-2" size={20} />
+                Instagram
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleLinkedInClick}
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+              >
+                <Linkedin className="mr-2" size={20} />
+                LinkedIn
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -224,10 +283,10 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <MapPin className="text-evolv-copper mt-1" size={24} />
+                  <MapPin className="text-evolv-copper mt-1 cursor-pointer hover:text-evolv-slate transition-colors" size={24} onClick={handleMapClick} />
                   <div>
                     <h3 className="font-bold text-primary mb-1">Location</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={handleMapClick}>
                       Jubilee Hills<br />
                       Hyderabad, India
                     </p>
@@ -235,10 +294,10 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Mail className="text-evolv-copper mt-1" size={24} />
+                  <Mail className="text-evolv-copper mt-1 cursor-pointer hover:text-evolv-slate transition-colors" size={24} onClick={handleEmailClick} />
                   <div>
                     <h3 className="font-bold text-primary mb-1">Email</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={handleEmailClick}>
                       connect@evolvglobal.com
                     </p>
                   </div>
@@ -250,21 +309,61 @@ const Contact = () => {
                     <h3 className="font-bold text-primary mb-1">WhatsApp Business</h3>
                     <Button 
                       variant="outline"
-                      className="border-2 border-evolv-copper text-evolv-copper hover:bg-evolv-copper hover:text-white mt-2"
-                      onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+                      className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white mt-2"
+                      onClick={handleWhatsAppClick}
                     >
+                      <MessageCircle className="mr-2" size={16} />
                       Chat with us
                     </Button>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Phone className="text-evolv-copper mt-1" size={24} />
+                  <Phone className="text-evolv-copper mt-1 cursor-pointer hover:text-evolv-slate transition-colors" size={24} onClick={handleCallClick} />
                   <div>
                     <h3 className="font-bold text-primary mb-1">Call Us</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={handleCallClick}>
                       +91 98765 43210
                     </p>
+                  </div>
+                </div>
+                
+                {/* Social Media Links */}
+                <div className="flex items-start space-x-4">
+                  <div className="text-evolv-copper mt-1">
+                    <Instagram size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-primary mb-1">Follow Us</h3>
+                    <div className="flex space-x-3 mt-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={handleInstagramClick}
+                        className="border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white"
+                      >
+                        <Instagram size={16} className="mr-1" />
+                        Instagram
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={handleLinkedInClick}
+                        className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                      >
+                        <Linkedin size={16} className="mr-1" />
+                        LinkedIn
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={handleTwitterClick}
+                        className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                      >
+                        <Twitter size={16} className="mr-1" />
+                        Twitter
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -279,6 +378,29 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Integration */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-primary mb-4">Visit Our Office</h2>
+            <p className="text-lg text-gray-600">Located in the heart of Hyderabad's business district</p>
+          </div>
+          
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6904276513157!2d78.40929!3d17.4441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzM4LjgiTiA3OMKwMjQnMzMuNCJF!5e0!3m2!1sen!2sin!4v1644000000000!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Evolv Global Office Location"
+            ></iframe>
           </div>
         </div>
       </section>
