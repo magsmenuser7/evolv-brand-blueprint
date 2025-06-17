@@ -24,9 +24,14 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/e09b4c14-a9ab-4e8b-9e6b-27b6c93cd0b4.png" 
+              src="/lovable-uploads/71d742d6-4d87-4a80-aba7-2744f957ee68.png" 
               alt="Evolv Global" 
-              className="h-12 w-auto"
+              className="h-14 w-auto"
+              onError={(e) => {
+                console.log('Logo failed to load:', e);
+                e.currentTarget.style.display = 'none';
+              }}
+              onLoad={() => console.log('Logo loaded successfully')}
             />
           </Link>
 
