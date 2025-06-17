@@ -26,7 +26,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/e09b4c14-a9ab-4e8b-9e6b-27b6c93cd0b4.png" 
               alt="Evolv Global" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
