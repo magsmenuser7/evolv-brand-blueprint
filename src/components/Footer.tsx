@@ -21,9 +21,11 @@ const Footer = () => {
           
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="text-3xl font-black mb-4">
-              EVOLV<span className="text-evolv-copper">.</span>
-            </div>
+            <img 
+              src="/lovable-uploads/71d742d6-4d87-4a80-aba7-2744f957ee68.png" 
+              alt="Evolv Global" 
+              className="h-12 w-auto mb-4 bg-white p-2 rounded"
+            />
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
               We don't run campaigns. We build brand ecosystems. 
               Evolv Global is where clarity meets execution.

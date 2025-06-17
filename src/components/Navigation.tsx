@@ -22,10 +22,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-black text-primary">
-              EVOLV<span className="text-evolv-copper">.</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/71d742d6-4d87-4a80-aba7-2744f957ee68.png" 
+              alt="Evolv Global" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
