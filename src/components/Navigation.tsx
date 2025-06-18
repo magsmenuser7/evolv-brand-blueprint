@@ -24,7 +24,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/0b786707-5d96-48d0-aaa7-635ddb8ede18.png" 
+              src="/lovable-uploads/18508a24-791e-410a-b53c-fc2c5ffdf0ac.png" 
               alt="Evolv Global" 
               className="h-12 w-auto"
               onError={(e) => {

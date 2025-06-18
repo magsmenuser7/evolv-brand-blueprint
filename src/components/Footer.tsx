@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <img 
-              src="/lovable-uploads/71d742d6-4d87-4a80-aba7-2744f957ee68.png" 
+              src="/lovable-uploads/18508a24-791e-410a-b53c-fc2c5ffdf0ac.png" 
               alt="Evolv Global" 
               className="h-12 w-auto mb-4 bg-white p-2 rounded"
             />
