@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -5,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Mail, MessageCircle, Phone, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { MapPin, Mail, MessageCircle, Phone, Instagram, Linkedin, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -53,31 +54,31 @@ const Contact = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi Evolv Global! I'm interested in discussing my brand's evolution. Can we schedule a consultation?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/916304970488?text=${message}`, '_blank');
   };
 
   const handleInstagramClick = () => {
-    window.open('https://instagram.com/evolvglobal', '_blank');
+    window.open('https://www.instagram.com/evolv._global?utm_source=qr&igsh=YnZyOHdpbmxmZnRv', '_blank');
   };
 
   const handleLinkedInClick = () => {
-    window.open('https://linkedin.com/company/evolv-global', '_blank');
+    window.open('https://www.linkedin.com/company/evolv-global/', '_blank');
   };
 
-  const handleTwitterClick = () => {
-    window.open('https://twitter.com/evolvglobal', '_blank');
+  const handleXClick = () => {
+    window.open('https://x.com/global_evolv?t=tY28K6FfW6zDdtRCwcQgPg&s=08', '_blank');
   };
 
   const handleCallClick = () => {
-    window.open('tel:+919876543210', '_self');
+    window.open('tel:+916304970488', '_self');
   };
 
   const handleEmailClick = () => {
-    window.open('mailto:connect@evolvglobal.com?subject=Brand Consultation Inquiry', '_self');
+    window.open('mailto:Connect@evolvbrands.in?subject=Brand Consultation Inquiry', '_self');
   };
 
   const handleMapClick = () => {
-    window.open('https://maps.google.com?q=Jubilee+Hills+Hyderabad+India', '_blank');
+    window.open('https://maps.google.com?q=8-2-293/82/B/S-7+4th+Floor+JK+TOWERS+Rd+Number+10C+Gayatri+Hills+Jubilee+Hills+Hyderabad+Telangana+500033', '_blank');
   };
 
   return (
@@ -199,7 +200,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 6304970488"
                       />
                     </div>
                   </div>
@@ -287,8 +288,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-primary mb-1">Location</h3>
                     <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={handleMapClick}>
-                      Jubilee Hills<br />
-                      Hyderabad, India
+                      8-2-293/82/B/S-7 4th Floor<br />
+                      JK TOWERS, Rd Number 10C<br />
+                      Gayatri Hills, Jubilee Hills<br />
+                      Hyderabad, Telangana 500033
                     </p>
                   </div>
                 </div>
@@ -298,7 +301,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-primary mb-1">Email</h3>
                     <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={handleEmailClick}>
-                      connect@evolvglobal.com
+                      Connect@evolvbrands.in
                     </p>
                   </div>
                 </div>
@@ -323,7 +326,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-primary mb-1">Call Us</h3>
                     <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={handleCallClick}>
-                      +91 98765 43210
+                      +91 6304970488
+                    </p>
+                    <p className="text-gray-600 cursor-pointer hover:text-evolv-copper transition-colors" onClick={() => window.open('tel:+919703356332', '_self')}>
+                      +91 9703356332
                     </p>
                   </div>
                 </div>
@@ -357,11 +363,11 @@ const Contact = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        onClick={handleTwitterClick}
+                        onClick={handleXClick}
                         className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
                       >
-                        <Twitter size={16} className="mr-1" />
-                        Twitter
+                        <X size={16} className="mr-1" />
+                        X
                       </Button>
                     </div>
                   </div>
@@ -392,7 +398,7 @@ const Contact = () => {
           
           <div className="rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6904276513157!2d78.40929!3d17.4441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzM4LjgiTiA3OMKwMjQnMzMuNCJF!5e0!3m2!1sen!2sin!4v1644000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6904276513157!2d78.40929!3d17.4441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97c6b8f6b64d%3A0x8f8b8b8b8b8b8b8b!2s8-2-293%2F82%2FB%2FS-7%2C%20JK%20TOWERS%2C%20Rd%20Number%2010C%2C%20Gayatri%20Hills%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033!5e0!3m2!1sen!2sin!4v1644000000000!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}
